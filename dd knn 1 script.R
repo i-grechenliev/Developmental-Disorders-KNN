@@ -1,6 +1,5 @@
 library(xlsx)
 library(tidyverse)
-Developmental_Disorders <- read_excel("C:/Users/jojo1/Downloads/Developmental Disorders.xlsx")
 Developmental_Disorders$Gender <- as.factor(Developmental_Disorders$Gender)
 dd <- Developmental_Disorders %>% mutate(Gender = ifelse(Gender == "M", 0, 1))
 suppressPackageStartupMessages(library(caret))
