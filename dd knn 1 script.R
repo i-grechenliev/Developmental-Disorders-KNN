@@ -21,4 +21,4 @@ predictions <- predict(best_model, testproc, type = "class")
 cm <- confusionMatrix(predictions, testproc$Diagnostic.Group)
 cm
 library(pROC)
-multiclass.roc(response = testproc$Diagnostic.Group, predictor = as.ordered(predictions))
+multiclass.roc(response = testproc$Diagnostic.Group, predictor = as.ordered(predictions), plot = TRUE)
